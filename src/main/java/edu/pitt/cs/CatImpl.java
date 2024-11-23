@@ -4,24 +4,23 @@ public class CatImpl implements Cat {
 
 	// TODO: Fill in with member variables
 	private int id;
-    private String name;
-    private boolean rented;
+	private String name;
+	private boolean rented = false; 
 
 	public CatImpl(int id, String name) {
 		// TODO: Fill in
 		this.id = id;
-        this.name = name;
-        this.rented = false;
+		this.name = name;
 	}
 
 	public void rentCat() {
 		// TODO: Fill in
-		this.rented = true;
+		rented = true;
 	}
 
 	public void returnCat() {
 		// TODO: Fill in
-		this.rented = false;
+		rented = false; 
 	}
 
 	public void renameCat(String name) {
@@ -31,22 +30,25 @@ public class CatImpl implements Cat {
 
 	public String getName() {
 		// TODO: Fill in
-		return this.name;
+		return name;
 	}
 
 	public int getId() {
 		// TODO: Fill in
-		return this.id;
+		return id;
 	}
 
 	public boolean getRented() {
 		// TODO: Fill in
-		return this.rented;
+		return rented;
 	}
 
 	public String toString() {
+		//	 * Postconditions: Return value is "ID 1. Jennyanydots".
 		// TODO: Fill in
-		return "ID " + this.id + ". " + this.name;
+		StringBuilder sb = new StringBuilder();
+		sb.append("ID ").append(id).append(". ").append(name);
+		return sb.toString();
 	}
 
 }
